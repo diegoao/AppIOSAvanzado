@@ -15,8 +15,27 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo4" translatesAutoresizingMaskIntoConstraints="NO" id="cRw-Zc-EBV">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhn-lr-XRb">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cRw-Zc-EBV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="15K-7s-e0F"/>
+                            <constraint firstItem="Dhn-lr-XRb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HCG-PZ-nKd"/>
+                            <constraint firstItem="Dhn-lr-XRb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="UGf-BR-jkg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dhn-lr-XRb" secondAttribute="trailing" id="Ulj-fo-9PX"/>
+                            <constraint firstAttribute="bottom" secondItem="Dhn-lr-XRb" secondAttribute="bottom" id="p7D-eJ-IFL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cRw-Zc-EBV" secondAttribute="trailing" id="sf3-3z-AAC"/>
+                            <constraint firstAttribute="bottom" secondItem="cRw-Zc-EBV" secondAttribute="bottom" id="vbp-x8-bPh"/>
+                            <constraint firstItem="cRw-Zc-EBV" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="wkl-G9-m3q"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,8 +44,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fondo4" width="1116" height="1941"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

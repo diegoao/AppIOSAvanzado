@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowsScene = (scene as? UIWindowScene) else { return }
         let mainWindow = UIWindow(windowScene: windowsScene)
-        let splash = ViewController()
+        let splash = SplashViewController()
         let navigation = UINavigationController(rootViewController: splash)
         mainWindow.rootViewController = navigation
         self.window = mainWindow

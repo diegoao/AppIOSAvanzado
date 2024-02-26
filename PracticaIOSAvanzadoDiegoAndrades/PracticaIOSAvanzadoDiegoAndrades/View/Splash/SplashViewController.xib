@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="PracticaIOSAvanzadoDiegoAndrades" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="DEh-N6-2Dj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo4" translatesAutoresizingMaskIntoConstraints="NO" id="LdN-J0-4ei">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-kp-9sj">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="LdN-J0-4ei" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Fby-Fq-Bwe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="c4u-kp-9sj" secondAttribute="trailing" id="N3U-pC-Ymx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LdN-J0-4ei" secondAttribute="trailing" id="QYr-LN-yEs"/>
+                <constraint firstAttribute="bottom" secondItem="LdN-J0-4ei" secondAttribute="bottom" id="Wow-Vn-RVZ"/>
+                <constraint firstItem="LdN-J0-4ei" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fNZ-g5-wBy"/>
+                <constraint firstAttribute="bottom" secondItem="c4u-kp-9sj" secondAttribute="bottom" id="pLh-6g-FAL"/>
+                <constraint firstItem="c4u-kp-9sj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ql6-bf-sIn"/>
+                <constraint firstItem="c4u-kp-9sj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tMJ-ho-oJK"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fondo4" width="1116" height="1941"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

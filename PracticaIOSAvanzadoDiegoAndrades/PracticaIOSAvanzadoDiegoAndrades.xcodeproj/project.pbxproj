@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		52F42B762B88B9D6009E6657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42B752B88B9D6009E6657 /* AppDelegate.swift */; };
 		52F42B782B88B9D6009E6657 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42B772B88B9D6009E6657 /* SceneDelegate.swift */; };
-		52F42B7A2B88B9D6009E6657 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42B792B88B9D6009E6657 /* ViewController.swift */; };
+		52F42B7A2B88B9D6009E6657 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42B792B88B9D6009E6657 /* SplashViewController.swift */; };
 		52F42B7F2B88B9D9009E6657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F42B7E2B88B9D9009E6657 /* Assets.xcassets */; };
 		52F42B822B88B9D9009E6657 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F42B802B88B9D9009E6657 /* LaunchScreen.storyboard */; };
 		52F42B8D2B88B9D9009E6657 /* PracticaIOSAvanzadoDiegoAndradesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42B8C2B88B9D9009E6657 /* PracticaIOSAvanzadoDiegoAndradesTests.swift */; };
 		52F42B972B88B9D9009E6657 /* PracticaIOSAvanzadoDiegoAndradesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42B962B88B9D9009E6657 /* PracticaIOSAvanzadoDiegoAndradesUITests.swift */; };
 		52F42B992B88B9D9009E6657 /* PracticaIOSAvanzadoDiegoAndradesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42B982B88B9D9009E6657 /* PracticaIOSAvanzadoDiegoAndradesUITestsLaunchTests.swift */; };
+		52F42BA62B8D16E5009E6657 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F42BA52B8D16E5009E6657 /* SplashViewController.xib */; };
+		52F42BAA2B8D1A89009E6657 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BA82B8D1A89009E6657 /* LoginViewController.swift */; };
+		52F42BAB2B8D1A89009E6657 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F42BA92B8D1A89009E6657 /* LoginViewController.xib */; };
+		52F42BB12B8D1AF6009E6657 /* HeroesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BAF2B8D1AF6009E6657 /* HeroesListViewController.swift */; };
+		52F42BB22B8D1AF6009E6657 /* HeroesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F42BB02B8D1AF6009E6657 /* HeroesListViewController.xib */; };
+		52F42BB62B8D1B86009E6657 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BB52B8D1B86009E6657 /* ApiProvider.swift */; };
+		52F42BB92B8D2149009E6657 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BB82B8D2149009E6657 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +45,7 @@
 		52F42B722B88B9D6009E6657 /* PracticaIOSAvanzadoDiegoAndrades.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticaIOSAvanzadoDiegoAndrades.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F42B752B88B9D6009E6657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52F42B772B88B9D6009E6657 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52F42B792B88B9D6009E6657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52F42B792B88B9D6009E6657 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		52F42B7E2B88B9D9009E6657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52F42B812B88B9D9009E6657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52F42B832B88B9D9009E6657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +54,13 @@
 		52F42B922B88B9D9009E6657 /* PracticaIOSAvanzadoDiegoAndradesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticaIOSAvanzadoDiegoAndradesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F42B962B88B9D9009E6657 /* PracticaIOSAvanzadoDiegoAndradesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaIOSAvanzadoDiegoAndradesUITests.swift; sourceTree = "<group>"; };
 		52F42B982B88B9D9009E6657 /* PracticaIOSAvanzadoDiegoAndradesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaIOSAvanzadoDiegoAndradesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52F42BA52B8D16E5009E6657 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		52F42BA82B8D1A89009E6657 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52F42BA92B8D1A89009E6657 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		52F42BAF2B8D1AF6009E6657 /* HeroesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewController.swift; sourceTree = "<group>"; };
+		52F42BB02B8D1AF6009E6657 /* HeroesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesListViewController.xib; sourceTree = "<group>"; };
+		52F42BB52B8D1B86009E6657 /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		52F42BB82B8D2149009E6657 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +111,10 @@
 		52F42B742B88B9D6009E6657 /* PracticaIOSAvanzadoDiegoAndrades */ = {
 			isa = PBXGroup;
 			children = (
+				52F42BB42B8D1B4E009E6657 /* Data */,
+				52F42BAC2B8D1AC4009E6657 /* View */,
 				52F42B752B88B9D6009E6657 /* AppDelegate.swift */,
 				52F42B772B88B9D6009E6657 /* SceneDelegate.swift */,
-				52F42B792B88B9D6009E6657 /* ViewController.swift */,
 				52F42B7E2B88B9D9009E6657 /* Assets.xcassets */,
 				52F42B802B88B9D9009E6657 /* LaunchScreen.storyboard */,
 				52F42B832B88B9D9009E6657 /* Info.plist */,
@@ -122,6 +137,60 @@
 				52F42B982B88B9D9009E6657 /* PracticaIOSAvanzadoDiegoAndradesUITestsLaunchTests.swift */,
 			);
 			path = PracticaIOSAvanzadoDiegoAndradesUITests;
+			sourceTree = "<group>";
+		};
+		52F42BA72B8D1A6C009E6657 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				52F42BA82B8D1A89009E6657 /* LoginViewController.swift */,
+				52F42BA92B8D1A89009E6657 /* LoginViewController.xib */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		52F42BAC2B8D1AC4009E6657 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52F42BB32B8D1B3C009E6657 /* Splash */,
+				52F42BAD2B8D1AD0009E6657 /* ListHeroes */,
+				52F42BA72B8D1A6C009E6657 /* login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52F42BAD2B8D1AD0009E6657 /* ListHeroes */ = {
+			isa = PBXGroup;
+			children = (
+				52F42BAF2B8D1AF6009E6657 /* HeroesListViewController.swift */,
+				52F42BB02B8D1AF6009E6657 /* HeroesListViewController.xib */,
+			);
+			path = ListHeroes;
+			sourceTree = "<group>";
+		};
+		52F42BB32B8D1B3C009E6657 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				52F42B792B88B9D6009E6657 /* SplashViewController.swift */,
+				52F42BA52B8D16E5009E6657 /* SplashViewController.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		52F42BB42B8D1B4E009E6657 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				52F42BB72B8D2137009E6657 /* Network */,
+				52F42BB52B8D1B86009E6657 /* ApiProvider.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		52F42BB72B8D2137009E6657 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				52F42BB82B8D2149009E6657 /* Endpoint.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +297,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F42BAB2B8D1A89009E6657 /* LoginViewController.xib in Resources */,
 				52F42B822B88B9D9009E6657 /* LaunchScreen.storyboard in Resources */,
+				52F42BB22B8D1AF6009E6657 /* HeroesListViewController.xib in Resources */,
+				52F42BA62B8D16E5009E6657 /* SplashViewController.xib in Resources */,
 				52F42B7F2B88B9D9009E6657 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,7 +326,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F42B7A2B88B9D6009E6657 /* ViewController.swift in Sources */,
+				52F42BB92B8D2149009E6657 /* Endpoint.swift in Sources */,
+				52F42BB12B8D1AF6009E6657 /* HeroesListViewController.swift in Sources */,
+				52F42BAA2B8D1A89009E6657 /* LoginViewController.swift in Sources */,
+				52F42B7A2B88B9D6009E6657 /* SplashViewController.swift in Sources */,
+				52F42BB62B8D1B86009E6657 /* ApiProvider.swift in Sources */,
 				52F42B762B88B9D6009E6657 /* AppDelegate.swift in Sources */,
 				52F42B782B88B9D6009E6657 /* SceneDelegate.swift in Sources */,
 			);
