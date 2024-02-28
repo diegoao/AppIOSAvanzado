@@ -12,7 +12,8 @@
             <connections>
                 <outlet property="emailText" destination="wqe-aB-YHo" id="zDH-VA-wIQ"/>
                 <outlet property="errorEmail" destination="Kkc-09-JPY" id="Dnl-cH-scP"/>
-                <outlet property="errorPassword" destination="Cye-fe-tFi" id="fEK-J5-j0J"/>
+                <outlet property="errorPassword" destination="Q3f-uS-Z2M" id="3dc-Uo-QYB"/>
+                <outlet property="loadingView" destination="kRC-f3-IdA" id="aH0-fa-MtO"/>
                 <outlet property="passwordText" destination="MJC-dT-hGZ" id="QbT-LM-6le"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -97,6 +98,22 @@
                         </label>
                     </subviews>
                 </stackView>
+                <view alpha="0.55000000000000004" contentMode="scaleToFill" id="kRC-f3-IdA">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="xYU-Qv-emE">
+                            <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            <color key="color" systemColor="linkColor"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="WG0-2p-mSD"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="xYU-Qv-emE" firstAttribute="centerY" secondItem="kRC-f3-IdA" secondAttribute="centerY" id="MX2-CU-VaV"/>
+                        <constraint firstItem="xYU-Qv-emE" firstAttribute="centerX" secondItem="kRC-f3-IdA" secondAttribute="centerX" id="S3n-cp-1Qf"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -125,6 +142,9 @@
     </objects>
     <resources>
         <image name="fondo2" width="1080" height="1920"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
