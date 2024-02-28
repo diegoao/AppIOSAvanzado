@@ -18,7 +18,12 @@ protocol LoginUseCaseProtocol {
 
 final class LoginUseCase: LoginUseCaseProtocol {
     
+    private var secureData: SecureDataProtocol
+    init(secureData: SecureDataProtocol = SecureData()) {
+        self.secureData = secureData
+    }
     
+   
     func login(user: String,
                password: String,
                onSuccess: @escaping(String?) -> Void,
@@ -29,6 +34,7 @@ final class LoginUseCase: LoginUseCaseProtocol {
             onError(.malformedURL)
             return
         }
+        
         
         // Codifico los datos
         let loginString = String(format: "%@:%@", user, password)
@@ -46,7 +52,7 @@ final class LoginUseCase: LoginUseCaseProtocol {
         
         //DataTask
         
-        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+        let task = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, response, error  in
             guard error == nil else {
                 onError(.other)
                 return
@@ -72,8 +78,8 @@ final class LoginUseCase: LoginUseCaseProtocol {
                 return
             }
             
+            self?.secureData.setToken(value: token)
             onSuccess(token)
-        
         }
         task.resume()
     }

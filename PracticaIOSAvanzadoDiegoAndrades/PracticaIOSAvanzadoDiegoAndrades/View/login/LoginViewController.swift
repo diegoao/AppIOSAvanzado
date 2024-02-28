@@ -50,7 +50,7 @@ class LoginViewController: UIViewController {
 
 
 extension LoginViewController {
-    // Metodo para "escuchar" variable de estrado del viewModel
+    // Metodo para "escuchar" variable de estado del viewModel
     private func setObservers() {
         viewModel.loginViewState = { [weak self] status in
             switch status {
