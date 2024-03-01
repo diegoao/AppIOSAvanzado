@@ -30,6 +30,8 @@
 		52F42BD42B8FAB72009E6657 /* SplashStatusLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BD32B8FAB72009E6657 /* SplashStatusLoad.swift */; };
 		52F42BD72B8FB8C3009E6657 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 52F42BD62B8FB8C3009E6657 /* KeychainSwift */; };
 		52F42BDA2B8FC645009E6657 /* SecureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BD92B8FC645009E6657 /* SecureData.swift */; };
+		52F42BE12B925C4A009E6657 /* HeroCaseUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BE02B925C4A009E6657 /* HeroCaseUse.swift */; };
+		52F42BE42B925D47009E6657 /* HeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BE32B925D47009E6657 /* HeroViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		52F42BCD2B8FA4A0009E6657 /* HTTPResponseCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseCodes.swift; sourceTree = "<group>"; };
 		52F42BD32B8FAB72009E6657 /* SplashStatusLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashStatusLoad.swift; sourceTree = "<group>"; };
 		52F42BD92B8FC645009E6657 /* SecureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureData.swift; sourceTree = "<group>"; };
+		52F42BE02B925C4A009E6657 /* HeroCaseUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCaseUse.swift; sourceTree = "<group>"; };
+		52F42BE32B925D47009E6657 /* HeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,7 @@
 		52F42BBA2B8D3207009E6657 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				52F42BE22B925D31009E6657 /* Hero */,
 				52F42BBB2B8D3217009E6657 /* Login */,
 			);
 			path = ViewModels;
@@ -249,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				52F42BC62B8F6523009E6657 /* LoginUseCase.swift */,
+				52F42BE02B925C4A009E6657 /* HeroCaseUse.swift */,
 			);
 			path = CaseUses;
 			sourceTree = "<group>";
@@ -270,6 +276,14 @@
 				52F42BD92B8FC645009E6657 /* SecureData.swift */,
 			);
 			path = SecureData;
+			sourceTree = "<group>";
+		};
+		52F42BE22B925D31009E6657 /* Hero */ = {
+			isa = PBXGroup;
+			children = (
+				52F42BE32B925D47009E6657 /* HeroViewModel.swift */,
+			);
+			path = Hero;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F42BE12B925C4A009E6657 /* HeroCaseUse.swift in Sources */,
 				52F42BCE2B8FA4A0009E6657 /* HTTPResponseCodes.swift in Sources */,
 				52F42BB92B8D2149009E6657 /* Endpoint.swift in Sources */,
 				52F42BB12B8D1AF6009E6657 /* HeroesListViewController.swift in Sources */,
@@ -418,6 +433,7 @@
 				52F42BAA2B8D1A89009E6657 /* LoginViewController.swift in Sources */,
 				52F42B7A2B88B9D6009E6657 /* SplashViewController.swift in Sources */,
 				52F42BBD2B8D3236009E6657 /* LoginViewModel.swift in Sources */,
+				52F42BE42B925D47009E6657 /* HeroViewModel.swift in Sources */,
 				52F42BC22B8F3F5A009E6657 /* LoginStatusLoad.swift in Sources */,
 				52F42BDA2B8FC645009E6657 /* SecureData.swift in Sources */,
 				52F42B762B88B9D6009E6657 /* AppDelegate.swift in Sources */,

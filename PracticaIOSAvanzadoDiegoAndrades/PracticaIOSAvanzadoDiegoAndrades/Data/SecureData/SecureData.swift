@@ -13,7 +13,7 @@ import KeychainSwift
 protocol SecureDataProtocol {
     func setToken(value: String)
     func getToken()-> String?
-    func deleteToken()
+    func deleteToken() -> Bool
 }
 
 
@@ -33,7 +33,7 @@ class SecureData: SecureDataProtocol {
     }
     
     // FUNCION PARA ELIMINAR EL TOKEN
-    func deleteToken(){
+    func deleteToken() -> Bool {
         
         keychain.delete(keyToken)
         
