@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Transformation {
+struct Transformation: Decodable, Hashable  {
     let id: String?
     let name: String?
     let description: String?
     let photo: String?
-    let hero: NSMHero?
+    let hero: Hero?
     
 }

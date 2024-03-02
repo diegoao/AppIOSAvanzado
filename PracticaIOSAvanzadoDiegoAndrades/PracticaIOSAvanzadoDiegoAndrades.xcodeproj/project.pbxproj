@@ -40,6 +40,7 @@
 		52F42BFD2B932067009E6657 /* Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BFC2B932067009E6657 /* Transformation.swift */; };
 		52F42BFF2B932072009E6657 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BFE2B932072009E6657 /* Location.swift */; };
 		52F42C012B93207D009E6657 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C002B93207C009E6657 /* Hero.swift */; };
+		52F42C032B93456F009E6657 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C022B93456F009E6657 /* ApiProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		52F42BFC2B932067009E6657 /* Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformation.swift; sourceTree = "<group>"; };
 		52F42BFE2B932072009E6657 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		52F42C002B93207C009E6657 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		52F42C022B93456F009E6657 /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				52F42BC82B8F65E5009E6657 /*  BaseNetwork */,
+				52F42C022B93456F009E6657 /* ApiProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -320,8 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				52F42C002B93207C009E6657 /* Hero.swift */,
-				52F42BFE2B932072009E6657 /* Location.swift */,
 				52F42BFC2B932067009E6657 /* Transformation.swift */,
+				52F42BFE2B932072009E6657 /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				52F42B782B88B9D6009E6657 /* SceneDelegate.swift in Sources */,
 				52F42BCA2B8FA3CF009E6657 /* NetworkError.swift in Sources */,
 				52F42BC72B8F6523009E6657 /* LoginUseCase.swift in Sources */,
+				52F42C032B93456F009E6657 /* ApiProvider.swift in Sources */,
 				52F42BFA2B927127009E6657 /* StoreDataProvider.swift in Sources */,
 				52F42BF72B926F36009E6657 /* NSMHero.swift in Sources */,
 			);

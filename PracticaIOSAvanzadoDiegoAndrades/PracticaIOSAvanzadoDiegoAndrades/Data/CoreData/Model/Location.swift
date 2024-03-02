@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Location {
+struct Location: Decodable, Hashable {
     let id: String?
     let latitude: String?
     let longitude: String?
     let date: String?
-    let hero: NSMHero?
+    let hero: Hero?
 
 }
