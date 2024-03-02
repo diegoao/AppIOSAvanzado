@@ -9,26 +9,26 @@
 import Foundation
 import CoreData
 
-@objc(Location)
-public class Location: NSManagedObject {
+@objc(NSMLocation)
+public class NSMLocation: NSManagedObject {
 
 }
 
 
-extension Location {
+extension NSMLocation {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Location> {
-        return NSFetchRequest<Location>(entityName: "Location")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<NSMLocation> {
+        return NSFetchRequest<NSMLocation>(entityName: "Location")
     }
 
     @NSManaged public var date: String?
     @NSManaged public var id: String?
     @NSManaged public var latitude: String?
     @NSManaged public var longitude: String?
-    @NSManaged public var hero: Hero?
+    @NSManaged public var hero: NSMHero?
 
 }
 
-extension Location : Identifiable {
+extension NSMLocation : Identifiable {
 
 }

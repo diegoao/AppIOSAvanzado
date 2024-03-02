@@ -9,36 +9,36 @@
 import Foundation
 import CoreData
 
-@objc(Hero)
-public class Hero: NSManagedObject {
+@objc(NSHero)
+public class NSMHero: NSManagedObject {
 
 }
 
 
 
-extension Hero {
+extension NSMHero {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Hero> {
-        return NSFetchRequest<Hero>(entityName: "Hero")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<NSMHero> {
+        return NSFetchRequest<NSMHero>(entityName: "Hero")
     }
 
     @NSManaged public var photo: String?
     @NSManaged public var name: String?
     @NSManaged public var heroDescription: String?
     @NSManaged public var id: String?
-    @NSManaged public var locations: Set<Location>
-    @NSManaged public var transformations: Set<Transformation>
+    @NSManaged public var locations: Set<NSMLocation>
+    @NSManaged public var transformations: Set<NSMTransformation>
 
 }
 
 // MARK: Generated accessors for locations
-extension Hero {
+extension NSMHero {
 
     @objc(addLocationsObject:)
-    @NSManaged public func addToLocations(_ value: Location)
+    @NSManaged public func addToLocations(_ value: NSMLocation)
 
     @objc(removeLocationsObject:)
-    @NSManaged public func removeFromLocations(_ value: Location)
+    @NSManaged public func removeFromLocations(_ value: NSMLocation)
 
     @objc(addLocations:)
     @NSManaged public func addToLocations(_ values: NSSet)
@@ -49,13 +49,13 @@ extension Hero {
 }
 
 // MARK: Generated accessors for transformations
-extension Hero {
+extension NSMHero {
 
     @objc(addTransformationsObject:)
-    @NSManaged public func addToTransformations(_ value: Transformation)
+    @NSManaged public func addToTransformations(_ value: NSMTransformation)
 
     @objc(removeTransformationsObject:)
-    @NSManaged public func removeFromTransformations(_ value: Transformation)
+    @NSManaged public func removeFromTransformations(_ value: NSMTransformation)
 
     @objc(addTransformations:)
     @NSManaged public func addToTransformations(_ values: NSSet)
@@ -65,6 +65,6 @@ extension Hero {
 
 }
 
-extension Hero : Identifiable {
+extension NSMHero : Identifiable {
 
 }
