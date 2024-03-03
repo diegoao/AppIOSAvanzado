@@ -35,10 +35,10 @@ class HeroesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.loadData()
-        
         configureUI()
 
-        // Do any additional setup after loading the view.
+
+        
     }
     
     // Función para eliminar el token
@@ -71,8 +71,8 @@ class HeroesListViewController: UIViewController {
 extension HeroesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let name = viewModel.nameForHero(indexPath: indexPath)
-//        let detailViewController = DetailViewController(heroe: name)
-//        navigationController?.pushViewController(detailViewController, animated: true)
+        let detailViewController = DetailViewController()
+        navigationController?.pushViewController(detailViewController, animated: true)
         
     }
 }
@@ -94,7 +94,7 @@ extension HeroesListViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // Devuelve la altura deseada para la celda en indexPath
-        135
+       100
     }
 }
     

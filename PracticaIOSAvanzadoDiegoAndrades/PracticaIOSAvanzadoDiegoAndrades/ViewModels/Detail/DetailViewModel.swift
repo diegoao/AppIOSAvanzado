@@ -1,20 +1,20 @@
 //
-//  HeroViewModel.swift
+//  DetailViewModel.swift
 //  PracticaIOSAvanzadoDiegoAndrades
 //
-//  Created by Macbook Pro on 1/3/24.
+//  Created by Macbook Pro on 3/3/24.
 //
 
 import Foundation
 import CoreData
 
-protocol HeroViewModelProtocol {
-    func deleteData()-> Bool
+protocol DetailViewModelProtocol {
+
     func loadData()
 }
 
 
-final class HeroViewModel {
+final class DetailViewModel: DetailViewModelProtocol {
     private var heroess: [NSMHero] = []
     private var secureData: SecureDataProtocol
     private var apiProvider: ApiProvider
@@ -29,19 +29,12 @@ final class HeroViewModel {
     }
     
     
-
     
-    
-    func deleteData()-> Bool{
-        storeDataProvider.clearBBDD()
-        let tokenEliminado = self.secureData.deleteToken()
-        return tokenEliminado
-    }
     
 }
 
 
-extension HeroViewModel {
+extension DetailViewModel {
 
     func loadData() {
         heroess = storeDataProvider.fetchHeroes(filter: nil, sorting: self.sortDescriptor(ascending: false))
@@ -109,7 +102,3 @@ extension HeroViewModel {
     }
 }
     
-    
-    
-    
-

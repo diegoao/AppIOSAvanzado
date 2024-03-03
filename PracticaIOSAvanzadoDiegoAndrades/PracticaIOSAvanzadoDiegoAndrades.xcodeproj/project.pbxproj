@@ -42,10 +42,12 @@
 		52F42C0C2B939F4F009E6657 /* NSMHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C062B939F4F009E6657 /* NSMHero.swift */; };
 		52F42C0E2B939F4F009E6657 /* NSMLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C082B939F4F009E6657 /* NSMLocation.swift */; };
 		52F42C162B93B6CD009E6657 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C152B93B6CD009E6657 /* UIImageView.swift */; };
-		52F42C362B93D9DF009E6657 /* HeroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C342B93D9DF009E6657 /* HeroViewCell.swift */; };
-		52F42C372B93D9DF009E6657 /* HeroViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F42C352B93D9DF009E6657 /* HeroViewCell.xib */; };
 		52F42C3A2B93E4DC009E6657 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C382B93E4DC009E6657 /* HeroTableViewCell.swift */; };
 		52F42C3B2B93E4DC009E6657 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F42C392B93E4DC009E6657 /* HeroTableViewCell.xib */; };
+		52F42C422B945D5B009E6657 /* DetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C412B945D5B009E6657 /* DetailUseCase.swift */; };
+		52F42C452B945D7C009E6657 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C442B945D7C009E6657 /* DetailViewModel.swift */; };
+		52F42C4E2B946AB7009E6657 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C4C2B946AB7009E6657 /* DetailViewController.swift */; };
+		52F42C4F2B946AB7009E6657 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F42C4D2B946AB7009E6657 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,10 +106,12 @@
 		52F42C062B939F4F009E6657 /* NSMHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMHero.swift; sourceTree = "<group>"; };
 		52F42C082B939F4F009E6657 /* NSMLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMLocation.swift; sourceTree = "<group>"; };
 		52F42C152B93B6CD009E6657 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		52F42C342B93D9DF009E6657 /* HeroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewCell.swift; sourceTree = "<group>"; };
-		52F42C352B93D9DF009E6657 /* HeroViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroViewCell.xib; sourceTree = "<group>"; };
 		52F42C382B93E4DC009E6657 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
 		52F42C392B93E4DC009E6657 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
+		52F42C412B945D5B009E6657 /* DetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCase.swift; sourceTree = "<group>"; };
+		52F42C442B945D7C009E6657 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		52F42C4C2B946AB7009E6657 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		52F42C4D2B946AB7009E6657 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				52F42BB32B8D1B3C009E6657 /* Splash */,
+				52F42C3C2B93FC32009E6657 /* Detail */,
 				52F42BAD2B8D1AD0009E6657 /* ListHeroes */,
 				52F42BA72B8D1A6C009E6657 /* login */,
 			);
@@ -213,8 +218,6 @@
 			children = (
 				52F42BAF2B8D1AF6009E6657 /* HeroesListViewController.swift */,
 				52F42BB02B8D1AF6009E6657 /* HeroesListViewController.xib */,
-				52F42C342B93D9DF009E6657 /* HeroViewCell.swift */,
-				52F42C352B93D9DF009E6657 /* HeroViewCell.xib */,
 				52F42C382B93E4DC009E6657 /* HeroTableViewCell.swift */,
 				52F42C392B93E4DC009E6657 /* HeroTableViewCell.xib */,
 			);
@@ -252,6 +255,7 @@
 		52F42BBA2B8D3207009E6657 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				52F42C432B945D68009E6657 /* Detail */,
 				52F42BE22B925D31009E6657 /* Hero */,
 				52F42BBB2B8D3217009E6657 /* Login */,
 			);
@@ -290,6 +294,7 @@
 			children = (
 				52F42BC62B8F6523009E6657 /* LoginUseCase.swift */,
 				52F42BE02B925C4A009E6657 /* HeroCaseUse.swift */,
+				52F42C412B945D5B009E6657 /* DetailUseCase.swift */,
 			);
 			path = CaseUses;
 			sourceTree = "<group>";
@@ -350,6 +355,23 @@
 				52F42C152B93B6CD009E6657 /* UIImageView.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		52F42C3C2B93FC32009E6657 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				52F42C4C2B946AB7009E6657 /* DetailViewController.swift */,
+				52F42C4D2B946AB7009E6657 /* DetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		52F42C432B945D68009E6657 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				52F42C442B945D7C009E6657 /* DetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,10 +486,10 @@
 			files = (
 				52F42BAB2B8D1A89009E6657 /* LoginViewController.xib in Resources */,
 				52F42B822B88B9D9009E6657 /* LaunchScreen.storyboard in Resources */,
+				52F42C4F2B946AB7009E6657 /* DetailViewController.xib in Resources */,
 				52F42BB22B8D1AF6009E6657 /* HeroesListViewController.xib in Resources */,
 				52F42BA62B8D16E5009E6657 /* SplashViewController.xib in Resources */,
 				52F42C3B2B93E4DC009E6657 /* HeroTableViewCell.xib in Resources */,
-				52F42C372B93D9DF009E6657 /* HeroViewCell.xib in Resources */,
 				52F42B7F2B88B9D9009E6657 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,9 +516,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F42BE12B925C4A009E6657 /* HeroCaseUse.swift in Sources */,
-				52F42C362B93D9DF009E6657 /* HeroViewCell.swift in Sources */,
 				52F42C162B93B6CD009E6657 /* UIImageView.swift in Sources */,
 				52F42BCE2B8FA4A0009E6657 /* HTTPResponseCodes.swift in Sources */,
+				52F42C422B945D5B009E6657 /* DetailUseCase.swift in Sources */,
 				52F42BB92B8D2149009E6657 /* Endpoint.swift in Sources */,
 				52F42BB12B8D1AF6009E6657 /* HeroesListViewController.swift in Sources */,
 				52F42C0E2B939F4F009E6657 /* NSMLocation.swift in Sources */,
@@ -506,6 +528,7 @@
 				52F42BBD2B8D3236009E6657 /* LoginViewModel.swift in Sources */,
 				52F42BE82B926BAE009E6657 /* Model.xcdatamodeld in Sources */,
 				52F42C012B93207D009E6657 /* Hero.swift in Sources */,
+				52F42C452B945D7C009E6657 /* DetailViewModel.swift in Sources */,
 				52F42BE42B925D47009E6657 /* HeroViewModel.swift in Sources */,
 				52F42BC22B8F3F5A009E6657 /* LoginStatusLoad.swift in Sources */,
 				52F42BDA2B8FC645009E6657 /* SecureData.swift in Sources */,
@@ -519,6 +542,7 @@
 				52F42C0C2B939F4F009E6657 /* NSMHero.swift in Sources */,
 				52F42BC72B8F6523009E6657 /* LoginUseCase.swift in Sources */,
 				52F42C032B93456F009E6657 /* ApiProvider.swift in Sources */,
+				52F42C4E2B946AB7009E6657 /* DetailViewController.swift in Sources */,
 				52F42BFA2B927127009E6657 /* StoreDataProvider.swift in Sources */,
 				52F42C0A2B939F4F009E6657 /* NSMTransformation.swift in Sources */,
 			);

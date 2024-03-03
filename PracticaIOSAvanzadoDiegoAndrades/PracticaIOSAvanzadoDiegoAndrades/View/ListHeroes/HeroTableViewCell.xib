@@ -35,6 +35,8 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="rla-lx-LdW" firstAttribute="leading" secondItem="SdR-O4-QBt" secondAttribute="trailing" constant="10" id="9ui-Ey-tJP"/>
+                            <constraint firstItem="SdR-O4-QBt" firstAttribute="centerY" secondItem="VYe-Ca-IVs" secondAttribute="centerY" id="BGw-41-ygM"/>
+                            <constraint firstItem="rla-lx-LdW" firstAttribute="centerY" secondItem="VYe-Ca-IVs" secondAttribute="centerY" id="PaG-zR-aZY"/>
                             <constraint firstAttribute="bottom" secondItem="SdR-O4-QBt" secondAttribute="bottom" constant="8" id="ZJ6-Qm-5C4"/>
                             <constraint firstItem="SdR-O4-QBt" firstAttribute="leading" secondItem="VYe-Ca-IVs" secondAttribute="leading" constant="8" id="d2B-r3-q3y"/>
                             <constraint firstItem="SdR-O4-QBt" firstAttribute="top" secondItem="VYe-Ca-IVs" secondAttribute="top" constant="8" id="vjQ-Vt-rTV"/>
