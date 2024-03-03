@@ -50,38 +50,6 @@
             endingLineNumber = "38"
             landmarkName = "loadData(id:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "63B25F64-3D7E-4AF4-A597-E94FCD64C4EB - aff35952a44aeb90"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;PracticaIOSAvanzadoDiegoAndrades.Transformation&gt;, PracticaIOSAvanzadoDiegoAndrades.GokuApiError&gt;) -&gt; () in PracticaIOSAvanzadoDiegoAndrades.DetailViewModel.loadData() -&gt; ()"
-                  moduleName = "PracticaIOSAvanzadoDiegoAndrades"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbookpro/Desktop/Desarrollo%20APP%20Mo%CC%81viles/IOS%20AVANZADO/Pra%CC%81ctica%20Diego/AppIOSAvanzado/PracticaIOSAvanzadoDiegoAndrades/PracticaIOSAvanzadoDiegoAndrades/ViewModels/Detail/DetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "80">
-               </Location>
-               <Location
-                  uuid = "63B25F64-3D7E-4AF4-A597-E94FCD64C4EB - e8e3cd2fefb4f67"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;PracticaIOSAvanzadoDiegoAndrades.Transformation&gt;, PracticaIOSAvanzadoDiegoAndrades.GokuApiError&gt;) -&gt; () in PracticaIOSAvanzadoDiegoAndrades.DetailViewModel.loadData(id: Swift.String) -&gt; ()"
-                  moduleName = "PracticaIOSAvanzadoDiegoAndrades"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbookpro/Desktop/Desarrollo%20APP%20Mo%CC%81viles/IOS%20AVANZADO/Pra%CC%81ctica%20Diego/AppIOSAvanzado/PracticaIOSAvanzadoDiegoAndrades/PracticaIOSAvanzadoDiegoAndrades/ViewModels/Detail/DetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "80">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -97,54 +65,6 @@
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "loadData(id:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1BBDAD51-2245-40A3-96FD-FBD94ACDE23F - 58ef2aa01b08fc0a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;PracticaIOSAvanzadoDiegoAndrades.Transformation&gt;, PracticaIOSAvanzadoDiegoAndrades.GokuApiError&gt;) -&gt; () in PracticaIOSAvanzadoDiegoAndrades.DetailViewModel.loadData() -&gt; ()"
-                  moduleName = "PracticaIOSAvanzadoDiegoAndrades"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbookpro/Desktop/Desarrollo%20APP%20Mo%CC%81viles/IOS%20AVANZADO/Pra%CC%81ctica%20Diego/AppIOSAvanzado/PracticaIOSAvanzadoDiegoAndrades/PracticaIOSAvanzadoDiegoAndrades/ViewModels/Detail/DetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "872">
-               </Location>
-               <Location
-                  uuid = "1BBDAD51-2245-40A3-96FD-FBD94ACDE23F - 6076977497606d79"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;PracticaIOSAvanzadoDiegoAndrades.Transformation&gt;, PracticaIOSAvanzadoDiegoAndrades.GokuApiError&gt;) -&gt; () in PracticaIOSAvanzadoDiegoAndrades.DetailViewModel.loadData(id: Swift.String) -&gt; ()"
-                  moduleName = "PracticaIOSAvanzadoDiegoAndrades"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbookpro/Desktop/Desarrollo%20APP%20Mo%CC%81viles/IOS%20AVANZADO/Pra%CC%81ctica%20Diego/AppIOSAvanzado/PracticaIOSAvanzadoDiegoAndrades/PracticaIOSAvanzadoDiegoAndrades/ViewModels/Detail/DetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "872">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "064965AC-37A0-49B5-810E-0F9CED13BA0B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PracticaIOSAvanzadoDiegoAndrades/View/Detail/DetailViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

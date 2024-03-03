@@ -29,7 +29,7 @@ class StoreDataProvider: StoreDataProviderProtocol {
     
     //importante definir el NSPersistentContainer
     private let persistenCpntainer: NSPersistentContainer!
-    
+    static var shared = StoreDataProvider()
     private static var model: NSManagedObjectModel = {
         let bundle = Bundle(for: StoreDataProvider.self)
         guard let url = bundle.url(forResource: "Model", withExtension: "momd"),

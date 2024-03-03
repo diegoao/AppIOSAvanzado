@@ -15,7 +15,7 @@ final class DetailViewModel {
     private var storeDataProvider: StoreDataProviderProtocol
 
     init(apiProvider: ApiProvider = ApiProvider(),
-         storeDataProvider: StoreDataProviderProtocol = StoreDataProvider()) {
+            storeDataProvider: StoreDataProviderProtocol = StoreDataProvider.shared) {
         self.apiProvider = apiProvider
         self.storeDataProvider = storeDataProvider
     }

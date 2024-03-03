@@ -22,13 +22,13 @@ final class HeroViewModel {
 
     init(secureData: SecureDataProtocol = SecureData(),
          apiProvider: ApiProvider = ApiProvider(),
-         storeDataProvider: StoreDataProviderProtocol = StoreDataProvider()) {
+         storeDataProvider: StoreDataProviderProtocol = StoreDataProvider.shared) {
         self.secureData = secureData
         self.apiProvider = apiProvider
         self.storeDataProvider = storeDataProvider
     }
     
-    
+
 
     
     
