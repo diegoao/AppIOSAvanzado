@@ -77,6 +77,16 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
 
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let transformation = viewModel.idTransfor(indexPath: indexPath) else {
+            return
+        }
+        let vm = TransforViewModel(transfor: transformation)
+        let transforViewController = TransforViewController(viewModel: vm)
+        navigationController?.pushViewController(transforViewController, animated: true)
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numTransform()
     }
@@ -104,3 +114,6 @@ extension DetailViewController: UICollectionViewDelegateFlowLayout {
     }
     
 }
+
+
+

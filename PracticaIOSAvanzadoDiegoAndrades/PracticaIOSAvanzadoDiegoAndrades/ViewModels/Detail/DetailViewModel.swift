@@ -25,6 +25,7 @@ final class DetailViewModel {
         self.apiProvider = apiProvider
         self.storeDataProvider = storeDataProvider
         self.hero = hero
+
     }
     
     
@@ -123,6 +124,8 @@ extension DetailViewModel {
     
     private func mapDataToHeroCellModel(filter: NSPredicate? = nil, sorting: [NSSortDescriptor]? = nil){
         transformaciones = Array(self.hero.transformations)
+        locations = Array(self.hero.locations)
+        
     }
     
 
@@ -158,8 +161,13 @@ extension DetailViewModel {
         return hero.photo
     }
     
-    func location() -> Void{
-        print(hero.locations)
+    func location() -> Int{
+        print(locations.count)
+        return locations.count
+    }
+    
+    func idTransfor(indexPath: IndexPath) -> NSMTransformation? {
+        return transformAt(indexPath: indexPath)
     }
     
 
