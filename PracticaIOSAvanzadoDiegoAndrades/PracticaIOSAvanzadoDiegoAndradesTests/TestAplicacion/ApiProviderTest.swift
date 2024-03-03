@@ -30,6 +30,8 @@ final class ApiProviderTest: XCTestCase {
     
     override func tearDownWithError() throws {
         try super.tearDownWithError()
+        MockURLProtocol.handler = nil
+        MockURLProtocol.error = nil
     }
     
     func test_getHeroes() {
