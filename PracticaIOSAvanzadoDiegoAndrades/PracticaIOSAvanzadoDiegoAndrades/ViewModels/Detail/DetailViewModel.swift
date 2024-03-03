@@ -161,13 +161,16 @@ extension DetailViewModel {
         return hero.photo
     }
     
-    func location() -> Int{
-        print(locations.count)
-        return locations.count
+    func locationsHero() -> [NSMLocation]{
+        return self.locations
     }
     
     func idTransfor(indexPath: IndexPath) -> NSMTransformation? {
         return transformAt(indexPath: indexPath)
+    }
+    
+    func heroNameAndId() -> (String?, String?){
+        return(hero.name, hero.id)
     }
     
 

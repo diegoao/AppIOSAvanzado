@@ -53,6 +53,7 @@
 		52F42C592B94D2AA009E6657 /* TransforViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C572B94D2AA009E6657 /* TransforViewController.swift */; };
 		52F42C5A2B94D2AA009E6657 /* TransforViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F42C582B94D2AA009E6657 /* TransforViewController.xib */; };
 		52F42C5D2B94D6AB009E6657 /* TransforViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C5C2B94D6AB009E6657 /* TransforViewModel.swift */; };
+		52F42C602B94E4A6009E6657 /* HeroAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C5F2B94E4A6009E6657 /* HeroAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		52F42C572B94D2AA009E6657 /* TransforViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransforViewController.swift; sourceTree = "<group>"; };
 		52F42C582B94D2AA009E6657 /* TransforViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransforViewController.xib; sourceTree = "<group>"; };
 		52F42C5C2B94D6AB009E6657 /* TransforViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransforViewModel.swift; sourceTree = "<group>"; };
+		52F42C5F2B94E4A6009E6657 /* HeroAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +374,7 @@
 		52F42C3C2B93FC32009E6657 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				52F42C5E2B94E493009E6657 /* maps */,
 				52F42C4C2B946AB7009E6657 /* DetailViewController.swift */,
 				52F42C4D2B946AB7009E6657 /* DetailViewController.xib */,
 				52F42C502B948F86009E6657 /* DetailCollectionViewCell.swift */,
@@ -403,6 +406,14 @@
 				52F42C5C2B94D6AB009E6657 /* TransforViewModel.swift */,
 			);
 			path = Transfor;
+			sourceTree = "<group>";
+		};
+		52F42C5E2B94E493009E6657 /* maps */ = {
+			isa = PBXGroup;
+			children = (
+				52F42C5F2B94E4A6009E6657 /* HeroAnnotation.swift */,
+			);
+			path = maps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -560,6 +571,7 @@
 				52F42B7A2B88B9D6009E6657 /* SplashViewController.swift in Sources */,
 				52F42BBD2B8D3236009E6657 /* LoginViewModel.swift in Sources */,
 				52F42BE82B926BAE009E6657 /* Model.xcdatamodeld in Sources */,
+				52F42C602B94E4A6009E6657 /* HeroAnnotation.swift in Sources */,
 				52F42C012B93207D009E6657 /* Hero.swift in Sources */,
 				52F42C452B945D7C009E6657 /* DetailViewModel.swift in Sources */,
 				52F42BE42B925D47009E6657 /* HeroViewModel.swift in Sources */,
@@ -756,6 +768,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PracticaIOSAvanzadoDiegoAndrades/Info.plist;
+				INFOPLIST_KEY_NSLocationUsageDescription = "Necesito conocer tu ubicación para mostrarla en el mapa de héroes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -783,6 +796,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PracticaIOSAvanzadoDiegoAndrades/Info.plist;
+				INFOPLIST_KEY_NSLocationUsageDescription = "Necesito conocer tu ubicación para mostrarla en el mapa de héroes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

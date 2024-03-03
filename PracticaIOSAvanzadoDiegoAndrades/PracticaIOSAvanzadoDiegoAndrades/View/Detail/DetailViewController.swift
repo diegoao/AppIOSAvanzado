@@ -17,8 +17,9 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var viewModel: DetailViewModel
+    private let locationManager = CLLocationManager()
     
-
+    
     
     init(viewModel: DetailViewModel){
         self.viewModel = viewModel
@@ -34,10 +35,8 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         addObservers()
         viewModel.loadDataFromService()
-        //viewModel.loadData()
         configureUI()
-        viewModel.location()
-
+        
     }
     
     func configureUI() {
@@ -48,11 +47,13 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         collectionView.delegate = self
         let nib = UINib(nibName: String(describing: DetailCollectionViewCell.self), bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: DetailCollectionViewCell.reuseIdentifier)
-        
         collectionView.backgroundColor = .clear
+        mapHero.delegate = self
+        mapHero.showsUserTrackingButton = true
+        mapHero.mapType = .hybrid
+        checklocationAuthorizationStatus()
         
-
-
+        
         
         
     }
@@ -60,6 +61,8 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     func addObservers() {
         viewModel.dataUpdated = { [weak self] in
             self?.collectionView.reloadData()
+            self?.updateDataInterface()
+            
         }
     }
     //Funcion para cargan imanegn del detalle
@@ -70,9 +73,53 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         }
         heroImage.setImage(url: imageURL)
     }
+    
+    
+    
+    
+    private func updateDataInterface(){
+        addAnnotations()
+        if let annotation = mapHero.annotations.first {
+            let region = MKCoordinateRegion(center: annotation.coordinate,
+                                            latitudinalMeters: 100000,
+                                            longitudinalMeters: 100000)
+            mapHero.region = region
+        }
+    }
+    
+    private func addAnnotations(){
+        var annotations = [HeroAnnotation]()
+        let (name, id) = viewModel.heroNameAndId()
+        for location in viewModel.locationsHero() {
+            annotations.append(
+                HeroAnnotation.init(coordinate: .init(latitude: Double(location.latitude ?? "") ?? 0.0,
+                                                      longitude: Double(location.longitude ?? "") ?? 0.0),
+                                    title: name,
+                                    id: id,
+                                    date: location.date)
+            )
+        }
+        //Añade las annotations al mapa
+        mapHero.addAnnotations(annotations)
+    }
+    
+    func checklocationAuthorizationStatus() {
+        
+        let status = locationManager.authorizationStatus
+        switch status {
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .denied, .restricted:
+            mapHero.showsUserLocation = false
+        case .authorizedAlways, .authorizedWhenInUse:
+            mapHero.showsUserLocation = true
+            locationManager.startUpdatingLocation()
+        @unknown default:
+            break
+        }
+    }
+    
 }
-
-
 
 
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -114,6 +161,20 @@ extension DetailViewController: UICollectionViewDelegateFlowLayout {
     }
     
 }
+
+
+
+//extension DetailViewController: MKMapViewDelegate {
+//    
+//    func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
+//        guard let heroAnnotation = annotation as? HeroAnnotation else {
+//            return
+//        }
+//    }
+//    
+//    
+//    
+//}
 
 
 
