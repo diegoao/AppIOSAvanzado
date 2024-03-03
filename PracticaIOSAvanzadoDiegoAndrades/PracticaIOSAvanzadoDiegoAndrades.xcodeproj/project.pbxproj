@@ -55,6 +55,10 @@
 		52F42C5D2B94D6AB009E6657 /* TransforViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C5C2B94D6AB009E6657 /* TransforViewModel.swift */; };
 		52F42C602B94E4A6009E6657 /* HeroAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C5F2B94E4A6009E6657 /* HeroAnnotation.swift */; };
 		52F42C632B94F561009E6657 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C622B94F561009E6657 /* MockURLProtocol.swift */; };
+		52F42C662B95085F009E6657 /* ApiProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C652B95085F009E6657 /* ApiProviderTest.swift */; };
+		52F42C682B950E86009E6657 /* MockHero.json in Resources */ = {isa = PBXBuildFile; fileRef = 52F42C672B950E86009E6657 /* MockHero.json */; };
+		52F42C6A2B950EA9009E6657 /* MockTransformation.json in Resources */ = {isa = PBXBuildFile; fileRef = 52F42C692B950EA9009E6657 /* MockTransformation.json */; };
+		52F42C6C2B951DCB009E6657 /* MockLocation.json in Resources */ = {isa = PBXBuildFile; fileRef = 52F42C6B2B951DCB009E6657 /* MockLocation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +130,10 @@
 		52F42C5C2B94D6AB009E6657 /* TransforViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransforViewModel.swift; sourceTree = "<group>"; };
 		52F42C5F2B94E4A6009E6657 /* HeroAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroAnnotation.swift; sourceTree = "<group>"; };
 		52F42C622B94F561009E6657 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		52F42C652B95085F009E6657 /* ApiProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProviderTest.swift; sourceTree = "<group>"; };
+		52F42C672B950E86009E6657 /* MockHero.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockHero.json; sourceTree = "<group>"; };
+		52F42C692B950EA9009E6657 /* MockTransformation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockTransformation.json; sourceTree = "<group>"; };
+		52F42C6B2B951DCB009E6657 /* MockLocation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockLocation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				52F42C642B94F5AB009E6657 /* TestAplicacion */,
-				52F42B8C2B88B9D9009E6657 /* PracticaIOSAvanzadoDiegoAndradesTests.swift */,
 			);
 			path = PracticaIOSAvanzadoDiegoAndradesTests;
 			sourceTree = "<group>";
@@ -423,6 +430,9 @@
 			isa = PBXGroup;
 			children = (
 				52F42C622B94F561009E6657 /* MockURLProtocol.swift */,
+				52F42C672B950E86009E6657 /* MockHero.json */,
+				52F42C692B950EA9009E6657 /* MockTransformation.json */,
+				52F42C6B2B951DCB009E6657 /* MockLocation.json */,
 			);
 			path = " Mocks";
 			sourceTree = "<group>";
@@ -430,6 +440,8 @@
 		52F42C642B94F5AB009E6657 /* TestAplicacion */ = {
 			isa = PBXGroup;
 			children = (
+				52F42B8C2B88B9D9009E6657 /* PracticaIOSAvanzadoDiegoAndradesTests.swift */,
+				52F42C652B95085F009E6657 /* ApiProviderTest.swift */,
 				52F42C612B94F52C009E6657 /*  Mocks */,
 			);
 			path = TestAplicacion;
@@ -561,6 +573,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F42C6C2B951DCB009E6657 /* MockLocation.json in Resources */,
+				52F42C6A2B950EA9009E6657 /* MockTransformation.json in Resources */,
+				52F42C682B950E86009E6657 /* MockHero.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +636,7 @@
 			files = (
 				52F42B8D2B88B9D9009E6657 /* PracticaIOSAvanzadoDiegoAndradesTests.swift in Sources */,
 				52F42C632B94F561009E6657 /* MockURLProtocol.swift in Sources */,
+				52F42C662B95085F009E6657 /* ApiProviderTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,7 +804,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PracticaIOSAvanzadoDiegoAndrades/Info.plist;
-				INFOPLIST_KEY_NSLocationUsageDescription = "Necesito conocer tu ubicación para mostrarla en el mapa de héroes";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesito conocer tu ubicación para mostrarla en el mapa de héroes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -816,7 +832,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PracticaIOSAvanzadoDiegoAndrades/Info.plist;
-				INFOPLIST_KEY_NSLocationUsageDescription = "Necesito conocer tu ubicación para mostrarla en el mapa de héroes";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesito conocer tu ubicación para mostrarla en el mapa de héroes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
