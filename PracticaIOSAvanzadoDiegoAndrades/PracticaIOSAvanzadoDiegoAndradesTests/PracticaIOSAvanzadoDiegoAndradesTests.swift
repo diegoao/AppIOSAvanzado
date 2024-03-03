@@ -97,5 +97,61 @@ final class PracticaIOSAvanzadoDiegoAndradesTests: XCTestCase {
         XCTAssertEqual(location.date, newLocation?.date)
     }
     
+    // MARK: - TEST CLASE ACTUALIZAR HEROE
+    func test_updateHeroes(){
+        
+        //Given
+        let newHeroe = Hero(id: "1", name: "Diego", description: "Probando Descripción", photo: "foto1", favorite: true)
+        sut.insert(heroes: [newHeroe])
+        
+        
+        //When
+        let newHeroe2 = Hero(id: "1", name: "DiegoUpdate", description: "Probando Descripción", photo: "foto1", favorite: true)
+        sut.insert(heroes: [newHeroe2])
+        
+        
+        //Then
+        let heroe = sut.fetchHeroes().first
+        XCTAssertEqual(heroe?.name, newHeroe2.name)
+        let finalCount = sut.fetchHeroes().count
+        XCTAssertEqual(finalCount, 1)
+        
+    }
+    
+    // MARK: - Eliminar bbdd
+    func test_clearBBDD() {
+        //GIVEN
+        let heroe = Hero(id: "1", name: "Diego", description: "Probando Descripción", photo: "foto1", favorite: true)
+        sut.insert(heroes: [heroe])
+        let transformation = Transformation(id: "2",
+                                            name: "Pedro",
+                                            description: "Profesor",
+                                            photo: "foto2",
+                                            hero: nil)
+        sut.insert(transformations: [transformation])
+        let location = Location(id: "3",
+                                latitude: "200",
+                                longitude: "1500",
+                                date: "08:00 PM",
+                                hero: nil)
+        sut.insert(locations: [location])
+        
+        XCTAssertEqual(sut.fetchHeroes().count, 1)
+        XCTAssertEqual(sut.fetchTransformations().count, 1)
+        XCTAssertEqual(sut.fetchLocations().count, 1)
+        
+        //when
+        sut.clearBBDD()
+        
+        
+        //Then
+        XCTAssertEqual(sut.fetchHeroes().count, 0)
+        XCTAssertEqual(sut.fetchTransformations().count, 0)
+        XCTAssertEqual(sut.fetchLocations().count, 0)
+        
+        
+        
+    }
+    
     
 }
