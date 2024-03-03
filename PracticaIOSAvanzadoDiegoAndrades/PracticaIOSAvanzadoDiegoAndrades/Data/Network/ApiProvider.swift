@@ -53,7 +53,7 @@ struct RequestProvider {
     }
     let host: URL = URL(string: "https://dragonball.keepcoding.education/api")!
   
-    func requestFor(endpoint: GokuEndpoints, token: String, idtransformation: String? = nil) -> URLRequest {
+    func requestFor(endpoint: GokuEndpoints, token: String, idtransformation: String? = nil, idLocation: String? = nil) -> URLRequest {
         let token = token
         let idtransformation = idtransformation
 
@@ -71,6 +71,9 @@ struct RequestProvider {
             struct TransformationRequest: Encodable {
                 let id: String
             }
+            struct LocationRequest: Encodable {
+                let id: String
+            }
             
             if case.listHeroes = endpoint {
                 let heroRequest = HeroRequest(name: "")
@@ -78,6 +81,10 @@ struct RequestProvider {
             }
             if case.listTransformaciones = endpoint {
                 let heroRequest = TransformationRequest(id: idtransformation ?? "")
+                request.httpBody = try? JSONEncoder().encode(heroRequest)
+            }
+            if case.listLocations = endpoint {
+                let heroRequest = LocationRequest(id: idLocation ?? "")
                 request.httpBody = try? JSONEncoder().encode(heroRequest)
             }
             
@@ -111,8 +118,9 @@ class ApiProvider {
         self.makeRequest(request: request, completion: completion)
     }
     
-    func getLocation(completion: @escaping ((Result<[Location], GokuApiError>) -> Void)) {
-        let request = requestProvider.requestFor(endpoint: .listTransformaciones, token:secureData.getToken() ?? "")
+    func getLocation(id: String, completion: @escaping ((Result<[Location], GokuApiError>) -> Void)) {
+        let request = requestProvider.requestFor(endpoint: .listLocations, token:secureData.getToken() ?? "",
+            idLocation: id)
         self.makeRequest(request: request, completion: completion)
     }
     

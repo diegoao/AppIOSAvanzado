@@ -34,11 +34,18 @@ class HeroesListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addObservers()
         viewModel.loadData()
         configureUI()
 
 
         
+    }
+    
+    func addObservers() {
+        viewModel.updatedHeroes = { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
     
     // Función para eliminar el token
@@ -70,8 +77,11 @@ class HeroesListViewController: UIViewController {
 //MARK: - Extension Delegate para temas de navegación
 extension HeroesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let id = viewModel.idForHero(indexPath: indexPath)
-        let detailViewController = DetailViewController(id: id ?? "")
+        guard let heroe = viewModel.idForHero(indexPath: indexPath) else {
+            return
+        }
+        let vm = DetailViewModel(hero: heroe)
+        let detailViewController = DetailViewController(viewModel: vm)
         navigationController?.pushViewController(detailViewController, animated: true)
         
     }
@@ -98,32 +108,5 @@ extension HeroesListViewController: UITableViewDataSource {
     }
 }
     
-//extension HeroesListViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-//    
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return self.viewModel.numOfHero()
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroesViewCell.reuseIdentifier, for: indexPath)
-//        
-//        let nameHero = self.viewModel.nameForHero(indexPath: indexPath)
-//        (cell as? HeroeViewCell)?.configureWith(name: nameHero)
-//        return cell
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: collectionView.bounds.size.width, height: 60)
-//    }
-//}
-//    
-////    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        guard let bootcamp = viewModel.HeroAt(indexPath: indexPath) else { return }
-//        
-//        let viewModel = DevelopersListViewModel(bootcamp: bootcamp)
-//        let developersVC = DevelopersListController(viewModel: viewModel)
-//        navigationController?.pushViewController(developersVC, animated: true)
-//    }
-    
-    
+
 

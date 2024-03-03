@@ -39,33 +39,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "63B25F64-3D7E-4AF4-A597-E94FCD64C4EB"
+            uuid = "5A3CEA52-1345-42C3-8BFF-43753AE619E9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PracticaIOSAvanzadoDiegoAndrades/ViewModels/Detail/DetailViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "loadData(id:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "loadDataFromService()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1BBDAD51-2245-40A3-96FD-FBD94ACDE23F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PracticaIOSAvanzadoDiegoAndrades/ViewModels/Detail/DetailViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "loadData(id:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5A3CEA52-1345-42C3-8BFF-43753AE619E9 - 94d9cdea117681cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PracticaIOSAvanzadoDiegoAndrades.DetailViewModel.loadDataFromService() -&gt; ()"
+                  moduleName = "PracticaIOSAvanzadoDiegoAndrades"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/Desarrollo%20APP%20Mo%CC%81viles/IOS%20AVANZADO/Pra%CC%81ctica%20Diego/AppIOSAvanzado/PracticaIOSAvanzadoDiegoAndrades/PracticaIOSAvanzadoDiegoAndrades/ViewModels/Detail/DetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1120">
+               </Location>
+               <Location
+                  uuid = "5A3CEA52-1345-42C3-8BFF-43753AE619E9 - 1beb5ddd4e5e9e52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;PracticaIOSAvanzadoDiegoAndrades.GokuApiError&gt;) -&gt; () in PracticaIOSAvanzadoDiegoAndrades.DetailViewModel.loadDataFromService() -&gt; ()"
+                  moduleName = "PracticaIOSAvanzadoDiegoAndrades"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/Desarrollo%20APP%20Mo%CC%81viles/IOS%20AVANZADO/Pra%CC%81ctica%20Diego/AppIOSAvanzado/PracticaIOSAvanzadoDiegoAndrades/PracticaIOSAvanzadoDiegoAndrades/ViewModels/Detail/DetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -17,11 +17,10 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var viewModel: DetailViewModel
-    private var id : String = ""
+    
 
     
-    init(id: String, viewModel: DetailViewModel = DetailViewModel()){
-        self.id = id
+    init(viewModel: DetailViewModel){
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -33,19 +32,18 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(id)
-        viewModel.loadData(id: id)
+        addObservers()
+        viewModel.loadDataFromService()
+        //viewModel.loadData()
         configureUI()
+        viewModel.location()
 
     }
     
     func configureUI() {
-        
-
-
-        
-
-        
+        lbName.text = viewModel.nameForHero()
+        descriptionText.text = viewModel.descriptionHero()
+        viewImage()
         collectionView.dataSource = self
         collectionView.delegate = self
         let nib = UINib(nibName: String(describing: DetailCollectionViewCell.self), bundle: nil)
@@ -57,6 +55,20 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
 
         
         
+    }
+    
+    func addObservers() {
+        viewModel.dataUpdated = { [weak self] in
+            self?.collectionView.reloadData()
+        }
+    }
+    //Funcion para cargan imanegn del detalle
+    func viewImage(){
+        let url = viewModel.photoHero()
+        guard let imageURL = URL(string: url ?? "") else {
+            return
+        }
+        heroImage.setImage(url: imageURL)
     }
 }
 

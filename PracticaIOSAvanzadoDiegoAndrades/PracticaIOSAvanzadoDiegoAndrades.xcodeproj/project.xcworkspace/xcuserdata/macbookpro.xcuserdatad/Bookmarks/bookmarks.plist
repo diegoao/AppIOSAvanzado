@@ -127,13 +127,13 @@
 				<string>
 </string>
 				<key>leading</key>
-				<string>
-extension HeroViewModel {
+				<string>}
+
 </string>
 				<key>trailing</key>
-				<string>    func loadData() {
-        heroess = storeDataProvider.fetchHeroes(filter: nil, sorting: self.sortDescriptor(ascending: false))
-        if storeDataProvider.countHeroes() == 0 {
+				<string>extension HeroViewModel {
+
+    func loadData() {
 </string>
 			</dict>
 			<key>type</key>

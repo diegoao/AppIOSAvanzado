@@ -19,6 +19,8 @@ final class HeroViewModel {
     private var secureData: SecureDataProtocol
     private var apiProvider: ApiProvider
     private var storeDataProvider: StoreDataProviderProtocol
+    
+    var updatedHeroes: (()->Void)?
 
     init(secureData: SecureDataProtocol = SecureData(),
          apiProvider: ApiProvider = ApiProvider(),
@@ -52,25 +54,25 @@ extension HeroViewModel {
                     DispatchQueue.main.async {
                         self?.storeDataProvider.insert(heroes: heroes)
                         self?.mapDataToHeroCellModel()
+                        self?.notifyDataUpdated()
                     }
                 case .failure(let error):
                     print("Error obteniendo datos \(error)")
                 }
             }
         }else{
-            //notifyDataUpdated()
-            mapDataToHeroCellModel()
+            notifyDataUpdated()
         }
     }
     
     private func mapDataToHeroCellModel(filter: NSPredicate? = nil, sorting: [NSSortDescriptor]? = nil){
-     let heroes = self.storeDataProvider.fetchHeroes(filter: filter, sorting: sorting)
+        self.heroess = self.storeDataProvider.fetchHeroes(filter: filter, sorting: sorting)
     }
     
 
     func notifyDataUpdated() {
         DispatchQueue.main.async {
-            self.mapDataToHeroCellModel()
+            self.updatedHeroes?()
         }
     }
     
@@ -83,8 +85,8 @@ extension HeroViewModel {
         return HeroAt(indexPath: indexPath)?.name
     }
     
-    func idForHero(indexPath: IndexPath) -> String? {
-        return HeroAt(indexPath: indexPath)?.id
+    func idForHero(indexPath: IndexPath) -> NSMHero? {
+        return HeroAt(indexPath: indexPath)
     }
     
     
