@@ -1,25 +1,24 @@
 //
-//  Hero+CoreDataClass.swift
+//  NSMHero+CoreDataClass.swift
 //  PracticaIOSAvanzadoDiegoAndrades
 //
-//  Created by Macbook Pro on 1/3/24.
+//  Created by Macbook Pro on 2/3/24.
 //
 //
 
 import Foundation
 import CoreData
 
-@objc(NSHero)
+@objc(NSMHero)
 public class NSMHero: NSManagedObject {
 
 }
 
 
-
 extension NSMHero {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<NSMHero> {
-        return NSFetchRequest<NSMHero>(entityName: "Hero")
+        return NSFetchRequest<NSMHero>(entityName: "NSMHero")
     }
 
     @NSManaged public var photo: String?

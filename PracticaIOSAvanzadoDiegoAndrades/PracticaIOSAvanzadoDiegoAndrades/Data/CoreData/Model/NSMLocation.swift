@@ -1,8 +1,8 @@
 //
-//  Location+CoreDataClass.swift
+//  NSMLocation+CoreDataClass.swift
 //  PracticaIOSAvanzadoDiegoAndrades
 //
-//  Created by Macbook Pro on 1/3/24.
+//  Created by Macbook Pro on 2/3/24.
 //
 //
 
@@ -14,11 +14,10 @@ public class NSMLocation: NSManagedObject {
 
 }
 
-
 extension NSMLocation {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<NSMLocation> {
-        return NSFetchRequest<NSMLocation>(entityName: "Location")
+        return NSFetchRequest<NSMLocation>(entityName: "NSMLocation")
     }
 
     @NSManaged public var date: String?

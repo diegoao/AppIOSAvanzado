@@ -33,14 +33,19 @@
 		52F42BE12B925C4A009E6657 /* HeroCaseUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BE02B925C4A009E6657 /* HeroCaseUse.swift */; };
 		52F42BE42B925D47009E6657 /* HeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BE32B925D47009E6657 /* HeroViewModel.swift */; };
 		52F42BE82B926BAE009E6657 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BE62B926BAE009E6657 /* Model.xcdatamodeld */; };
-		52F42BF32B926F36009E6657 /* NSMLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BED2B926F36009E6657 /* NSMLocation.swift */; };
-		52F42BF52B926F36009E6657 /* NSMTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BEF2B926F36009E6657 /* NSMTransformation.swift */; };
-		52F42BF72B926F36009E6657 /* NSMHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BF12B926F36009E6657 /* NSMHero.swift */; };
 		52F42BFA2B927127009E6657 /* StoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BF92B927127009E6657 /* StoreDataProvider.swift */; };
 		52F42BFD2B932067009E6657 /* Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BFC2B932067009E6657 /* Transformation.swift */; };
 		52F42BFF2B932072009E6657 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BFE2B932072009E6657 /* Location.swift */; };
 		52F42C012B93207D009E6657 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C002B93207C009E6657 /* Hero.swift */; };
 		52F42C032B93456F009E6657 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C022B93456F009E6657 /* ApiProvider.swift */; };
+		52F42C0A2B939F4F009E6657 /* NSMTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C042B939F4F009E6657 /* NSMTransformation.swift */; };
+		52F42C0C2B939F4F009E6657 /* NSMHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C062B939F4F009E6657 /* NSMHero.swift */; };
+		52F42C0E2B939F4F009E6657 /* NSMLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C082B939F4F009E6657 /* NSMLocation.swift */; };
+		52F42C162B93B6CD009E6657 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C152B93B6CD009E6657 /* UIImageView.swift */; };
+		52F42C362B93D9DF009E6657 /* HeroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C342B93D9DF009E6657 /* HeroViewCell.swift */; };
+		52F42C372B93D9DF009E6657 /* HeroViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F42C352B93D9DF009E6657 /* HeroViewCell.xib */; };
+		52F42C3A2B93E4DC009E6657 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C382B93E4DC009E6657 /* HeroTableViewCell.swift */; };
+		52F42C3B2B93E4DC009E6657 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F42C392B93E4DC009E6657 /* HeroTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,14 +95,19 @@
 		52F42BE02B925C4A009E6657 /* HeroCaseUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCaseUse.swift; sourceTree = "<group>"; };
 		52F42BE32B925D47009E6657 /* HeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewModel.swift; sourceTree = "<group>"; };
 		52F42BE72B926BAE009E6657 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		52F42BED2B926F36009E6657 /* NSMLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMLocation.swift; sourceTree = "<group>"; };
-		52F42BEF2B926F36009E6657 /* NSMTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMTransformation.swift; sourceTree = "<group>"; };
-		52F42BF12B926F36009E6657 /* NSMHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMHero.swift; sourceTree = "<group>"; };
 		52F42BF92B927127009E6657 /* StoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDataProvider.swift; sourceTree = "<group>"; };
 		52F42BFC2B932067009E6657 /* Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformation.swift; sourceTree = "<group>"; };
 		52F42BFE2B932072009E6657 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		52F42C002B93207C009E6657 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		52F42C022B93456F009E6657 /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		52F42C042B939F4F009E6657 /* NSMTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMTransformation.swift; sourceTree = "<group>"; };
+		52F42C062B939F4F009E6657 /* NSMHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMHero.swift; sourceTree = "<group>"; };
+		52F42C082B939F4F009E6657 /* NSMLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMLocation.swift; sourceTree = "<group>"; };
+		52F42C152B93B6CD009E6657 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		52F42C342B93D9DF009E6657 /* HeroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewCell.swift; sourceTree = "<group>"; };
+		52F42C352B93D9DF009E6657 /* HeroViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroViewCell.xib; sourceTree = "<group>"; };
+		52F42C382B93E4DC009E6657 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
+		52F42C392B93E4DC009E6657 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +213,10 @@
 			children = (
 				52F42BAF2B8D1AF6009E6657 /* HeroesListViewController.swift */,
 				52F42BB02B8D1AF6009E6657 /* HeroesListViewController.xib */,
+				52F42C342B93D9DF009E6657 /* HeroViewCell.swift */,
+				52F42C352B93D9DF009E6657 /* HeroViewCell.xib */,
+				52F42C382B93E4DC009E6657 /* HeroTableViewCell.swift */,
+				52F42C392B93E4DC009E6657 /* HeroTableViewCell.xib */,
 			);
 			path = ListHeroes;
 			sourceTree = "<group>";
@@ -255,6 +269,7 @@
 		52F42BBF2B8F3F35009E6657 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				52F42C142B93B6B2009E6657 /* extensions */,
 				52F42BC32B8F64C6009E6657 /* CaseUses */,
 				52F42BC02B8F3F48009E6657 /* Models */,
 			);
@@ -310,9 +325,6 @@
 			isa = PBXGroup;
 			children = (
 				52F42BFB2B93204D009E6657 /* Model */,
-				52F42BED2B926F36009E6657 /* NSMLocation.swift */,
-				52F42BEF2B926F36009E6657 /* NSMTransformation.swift */,
-				52F42BF12B926F36009E6657 /* NSMHero.swift */,
 				52F42BE62B926BAE009E6657 /* Model.xcdatamodeld */,
 				52F42BF92B927127009E6657 /* StoreDataProvider.swift */,
 			);
@@ -325,8 +337,19 @@
 				52F42C002B93207C009E6657 /* Hero.swift */,
 				52F42BFC2B932067009E6657 /* Transformation.swift */,
 				52F42BFE2B932072009E6657 /* Location.swift */,
+				52F42C042B939F4F009E6657 /* NSMTransformation.swift */,
+				52F42C062B939F4F009E6657 /* NSMHero.swift */,
+				52F42C082B939F4F009E6657 /* NSMLocation.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		52F42C142B93B6B2009E6657 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52F42C152B93B6CD009E6657 /* UIImageView.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +466,8 @@
 				52F42B822B88B9D9009E6657 /* LaunchScreen.storyboard in Resources */,
 				52F42BB22B8D1AF6009E6657 /* HeroesListViewController.xib in Resources */,
 				52F42BA62B8D16E5009E6657 /* SplashViewController.xib in Resources */,
+				52F42C3B2B93E4DC009E6657 /* HeroTableViewCell.xib in Resources */,
+				52F42C372B93D9DF009E6657 /* HeroViewCell.xib in Resources */,
 				52F42B7F2B88B9D9009E6657 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,14 +493,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F42BF52B926F36009E6657 /* NSMTransformation.swift in Sources */,
 				52F42BE12B925C4A009E6657 /* HeroCaseUse.swift in Sources */,
+				52F42C362B93D9DF009E6657 /* HeroViewCell.swift in Sources */,
+				52F42C162B93B6CD009E6657 /* UIImageView.swift in Sources */,
 				52F42BCE2B8FA4A0009E6657 /* HTTPResponseCodes.swift in Sources */,
 				52F42BB92B8D2149009E6657 /* Endpoint.swift in Sources */,
 				52F42BB12B8D1AF6009E6657 /* HeroesListViewController.swift in Sources */,
+				52F42C0E2B939F4F009E6657 /* NSMLocation.swift in Sources */,
 				52F42BD42B8FAB72009E6657 /* SplashStatusLoad.swift in Sources */,
 				52F42BAA2B8D1A89009E6657 /* LoginViewController.swift in Sources */,
-				52F42BF32B926F36009E6657 /* NSMLocation.swift in Sources */,
 				52F42B7A2B88B9D6009E6657 /* SplashViewController.swift in Sources */,
 				52F42BBD2B8D3236009E6657 /* LoginViewModel.swift in Sources */,
 				52F42BE82B926BAE009E6657 /* Model.xcdatamodeld in Sources */,
@@ -486,13 +512,15 @@
 				52F42BFF2B932072009E6657 /* Location.swift in Sources */,
 				52F42BFD2B932067009E6657 /* Transformation.swift in Sources */,
 				52F42B762B88B9D6009E6657 /* AppDelegate.swift in Sources */,
+				52F42C3A2B93E4DC009E6657 /* HeroTableViewCell.swift in Sources */,
 				52F42BCC2B8FA452009E6657 /* HTTPMethods.swift in Sources */,
 				52F42B782B88B9D6009E6657 /* SceneDelegate.swift in Sources */,
 				52F42BCA2B8FA3CF009E6657 /* NetworkError.swift in Sources */,
+				52F42C0C2B939F4F009E6657 /* NSMHero.swift in Sources */,
 				52F42BC72B8F6523009E6657 /* LoginUseCase.swift in Sources */,
 				52F42C032B93456F009E6657 /* ApiProvider.swift in Sources */,
 				52F42BFA2B927127009E6657 /* StoreDataProvider.swift in Sources */,
-				52F42BF72B926F36009E6657 /* NSMHero.swift in Sources */,
+				52F42C0A2B939F4F009E6657 /* NSMTransformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@ import CoreData
 protocol StoreDataProviderProtocol {
     func insert(heroes: [Hero])
     func fetchHeroes(filter: NSPredicate?, sorting: [NSSortDescriptor]?) -> [NSMHero]
+    func countHeroes() -> Int
     func insert(transformations: [Transformation])
     func fetchTransformations() -> [NSMTransformation]
     func insert(locations: [Location])
@@ -100,6 +101,17 @@ extension StoreDataProvider {
                 return []
             }
         }
+    
+        func countHeroes() -> Int {
+            let request = NSMHero.fetchRequest()
+            do {
+                return try moc.count(for: request)
+            } catch {
+                print (error.localizedDescription)
+                return 0
+            }
+        }
+
         
         
         func insert(transformations: [Transformation]) {

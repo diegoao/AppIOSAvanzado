@@ -1,8 +1,8 @@
 //
-//  Transformation+CoreDataClass.swift
+//  NSMTransformation+CoreDataClass.swift
 //  PracticaIOSAvanzadoDiegoAndrades
 //
-//  Created by Macbook Pro on 1/3/24.
+//  Created by Macbook Pro on 2/3/24.
 //
 //
 
@@ -18,7 +18,7 @@ public class NSMTransformation: NSManagedObject {
 extension NSMTransformation {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<NSMTransformation> {
-        return NSFetchRequest<NSMTransformation>(entityName: "Transformation")
+        return NSFetchRequest<NSMTransformation>(entityName: "NSMTransformation")
     }
 
     @NSManaged public var id: String?

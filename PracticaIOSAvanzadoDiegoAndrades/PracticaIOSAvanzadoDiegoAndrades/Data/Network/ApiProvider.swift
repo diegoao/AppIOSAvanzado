@@ -50,14 +50,23 @@ struct RequestProvider {
     init(secureData: SecureDataProtocol = SecureData()) {
         self.secureData = secureData
     }
-    let host: URL = URL(string: "https://dragonball.keepcoding.education")!
-    let token = "eyJraWQiOiJwcml2YXRlIiwiYWxnIjoiSFMyNTYiLCJ0eXAiOiJKV1QifQ.eyJpZGVudGlmeSI6IjdBQjhBQzRELUFEOEYtNEFDRS1BQTQ1LTIxRTg0QUU4QkJFNyIsImVtYWlsIjoiYmVqbEBrZWVwY29kaW5nLmVzIiwiZXhwaXJhdGlvbiI6NjQwOTIyMTEyMDB9.Dxxy91hTVz3RTF7w1YVTJ7O9g71odRcqgD00gspm30s"
-    
-    func requestFor(endpoint: GokuEndpoints) -> URLRequest {
+    let host: URL = URL(string: "https://dragonball.keepcoding.education/api")!
+  
+    func requestFor(endpoint: GokuEndpoints, token: String) -> URLRequest {
+        let token = token
         switch endpoint {
         case .listHeroes, .listTransformaciones, .listLocations:
             var request = URLRequest.init(url: endpoint.urlFor(host: host))
+            // Indicamos el metodo post
+            request.httpMethod = HTTPMethods.post
             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            struct HeroRequest: Encodable {
+                let name: String
+            }
+            
+            let heroRequest = HeroRequest(name: "")
+            request.httpBody = try? JSONEncoder().encode(heroRequest)
             return request
         }
     }
@@ -66,30 +75,34 @@ struct RequestProvider {
 
 class ApiProvider {
     
+    private var secureData: SecureDataProtocol
     private let session: URLSession
     private let requestProvider: RequestProvider
     
-    init(session: URLSession = URLSession.shared, requestProvider: RequestProvider = RequestProvider()) {
+    init(session: URLSession = URLSession.shared, requestProvider: RequestProvider = RequestProvider(), secureData: SecureDataProtocol = SecureData()) {
         self.session = session
         self.requestProvider = requestProvider
+        self.secureData = secureData
     }
     
-    func getHero( completion: @escaping (Result<[Hero], GokuApiError>) -> Void) {
-        let request = requestProvider.requestFor(endpoint: .listHeroes)
+    func getHero(completion: @escaping (Result<[Hero], GokuApiError>) -> Void) {
+        let request = requestProvider.requestFor(endpoint: .listHeroes, token:secureData.getToken() ?? "")
+        self.makeRequest(request: request, completion: completion)
+        
+    }
+    
+    func getTransformation(completion: @escaping ((Result<[Transformation], GokuApiError>) -> Void)) {
+        let request = requestProvider.requestFor(endpoint: .listTransformaciones, token:secureData.getToken() ?? "")
         self.makeRequest(request: request, completion: completion)
     }
     
-    func getTransformation(completion: @escaping ((Result<[Transformations], GokuApiError>) -> Void)) {
-        let request = requestProvider.requestFor(endpoint: .listTransformaciones)
-        self.makeRequest(request: request, completion: completion)
-    }
-    
-    func getLocation(completion: @escaping ((Result<[Locations], GokuApiError>) -> Void)) {
-        let request = requestProvider.requestFor(endpoint: .listTransformaciones)
+    func getLocation(completion: @escaping ((Result<[Location], GokuApiError>) -> Void)) {
+        let request = requestProvider.requestFor(endpoint: .listTransformaciones, token:secureData.getToken() ?? "")
         self.makeRequest(request: request, completion: completion)
     }
     
     func makeRequest<T: Decodable>( request: URLRequest, completion: @escaping ((Result<[T], GokuApiError>) -> Void)) {
+        print(request)
         
         session.dataTask(with: request) { data, response, error in
             
@@ -110,7 +123,11 @@ class ApiProvider {
             }
             
             do {
-                let responseData = try JSONDecoder().decode([T].self, from: data)
+                var responseData = try JSONDecoder().decode([T].self, from: data)
+                if !responseData.isEmpty, T.self == Hero.self {
+                    responseData.removeLast()
+                }
+                
                 completion(.success(responseData))
             } catch {
                 completion(.failure(.parsingData(error: error)))
