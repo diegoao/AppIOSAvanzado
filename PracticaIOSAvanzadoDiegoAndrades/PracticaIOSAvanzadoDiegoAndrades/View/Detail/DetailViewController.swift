@@ -81,8 +81,8 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         addAnnotations()
         if let annotation = mapHero.annotations.first {
             let region = MKCoordinateRegion(center: annotation.coordinate,
-                                            latitudinalMeters: 100000,
-                                            longitudinalMeters: 100000)
+                                            latitudinalMeters: 1800,
+                                            longitudinalMeters: 1800)
             mapHero.region = region
         }
     }
