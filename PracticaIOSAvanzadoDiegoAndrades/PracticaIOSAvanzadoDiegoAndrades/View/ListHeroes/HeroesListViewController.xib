@@ -20,6 +20,9 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo5" translatesAutoresizingMaskIntoConstraints="NO" id="LfE-4N-45M">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ir4-GC-iZq">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
@@ -35,25 +38,33 @@
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Pbc-cK-YR2">
                             <rect key="frame" x="0.0" y="34.333333333333314" width="393" height="724.66666666666674"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="separatorColor" systemColor="systemOrangeColor"/>
+                            <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="LfE-4N-45M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6v2-OE-VpL"/>
+                <constraint firstAttribute="bottom" secondItem="LfE-4N-45M" secondAttribute="bottom" id="IKN-w7-h4U"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ir4-GC-iZq" secondAttribute="bottom" id="PFT-wW-HAB"/>
                 <constraint firstItem="Ir4-GC-iZq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="VWU-XX-atf"/>
                 <constraint firstItem="Ir4-GC-iZq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hkC-Mu-0sY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LfE-4N-45M" secondAttribute="trailing" id="oVf-Kq-Phc"/>
+                <constraint firstItem="LfE-4N-45M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vTk-wc-sPg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ir4-GC-iZq" secondAttribute="trailing" id="xzn-Eb-dTg"/>
             </constraints>
             <point key="canvasLocation" x="139.69465648854961" y="-7.042253521126761"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="fondo5" width="1075" height="2343"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

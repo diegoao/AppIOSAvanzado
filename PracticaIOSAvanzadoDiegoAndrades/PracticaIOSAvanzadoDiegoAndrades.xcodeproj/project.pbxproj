@@ -30,7 +30,6 @@
 		52F42BD42B8FAB72009E6657 /* SplashStatusLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BD32B8FAB72009E6657 /* SplashStatusLoad.swift */; };
 		52F42BD72B8FB8C3009E6657 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 52F42BD62B8FB8C3009E6657 /* KeychainSwift */; };
 		52F42BDA2B8FC645009E6657 /* SecureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BD92B8FC645009E6657 /* SecureData.swift */; };
-		52F42BE12B925C4A009E6657 /* HeroCaseUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BE02B925C4A009E6657 /* HeroCaseUse.swift */; };
 		52F42BE42B925D47009E6657 /* HeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BE32B925D47009E6657 /* HeroViewModel.swift */; };
 		52F42BE82B926BAE009E6657 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BE62B926BAE009E6657 /* Model.xcdatamodeld */; };
 		52F42BFA2B927127009E6657 /* StoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42BF92B927127009E6657 /* StoreDataProvider.swift */; };
@@ -48,6 +47,9 @@
 		52F42C452B945D7C009E6657 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C442B945D7C009E6657 /* DetailViewModel.swift */; };
 		52F42C4E2B946AB7009E6657 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C4C2B946AB7009E6657 /* DetailViewController.swift */; };
 		52F42C4F2B946AB7009E6657 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F42C4D2B946AB7009E6657 /* DetailViewController.xib */; };
+		52F42C522B948F86009E6657 /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C502B948F86009E6657 /* DetailCollectionViewCell.swift */; };
+		52F42C532B948F86009E6657 /* DetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F42C512B948F86009E6657 /* DetailCollectionViewCell.xib */; };
+		52F42C552B94978C009E6657 /* UIcollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42C542B94978C009E6657 /* UIcollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +96,6 @@
 		52F42BCD2B8FA4A0009E6657 /* HTTPResponseCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseCodes.swift; sourceTree = "<group>"; };
 		52F42BD32B8FAB72009E6657 /* SplashStatusLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashStatusLoad.swift; sourceTree = "<group>"; };
 		52F42BD92B8FC645009E6657 /* SecureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureData.swift; sourceTree = "<group>"; };
-		52F42BE02B925C4A009E6657 /* HeroCaseUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCaseUse.swift; sourceTree = "<group>"; };
 		52F42BE32B925D47009E6657 /* HeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewModel.swift; sourceTree = "<group>"; };
 		52F42BE72B926BAE009E6657 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		52F42BF92B927127009E6657 /* StoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDataProvider.swift; sourceTree = "<group>"; };
@@ -112,6 +113,9 @@
 		52F42C442B945D7C009E6657 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		52F42C4C2B946AB7009E6657 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		52F42C4D2B946AB7009E6657 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		52F42C502B948F86009E6657 /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		52F42C512B948F86009E6657 /* DetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		52F42C542B94978C009E6657 /* UIcollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,7 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				52F42BC62B8F6523009E6657 /* LoginUseCase.swift */,
-				52F42BE02B925C4A009E6657 /* HeroCaseUse.swift */,
 				52F42C412B945D5B009E6657 /* DetailUseCase.swift */,
 			);
 			path = CaseUses;
@@ -353,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				52F42C152B93B6CD009E6657 /* UIImageView.swift */,
+				52F42C542B94978C009E6657 /* UIcollectionViewCell.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -362,6 +366,8 @@
 			children = (
 				52F42C4C2B946AB7009E6657 /* DetailViewController.swift */,
 				52F42C4D2B946AB7009E6657 /* DetailViewController.xib */,
+				52F42C502B948F86009E6657 /* DetailCollectionViewCell.swift */,
+				52F42C512B948F86009E6657 /* DetailCollectionViewCell.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -491,6 +497,7 @@
 				52F42BA62B8D16E5009E6657 /* SplashViewController.xib in Resources */,
 				52F42C3B2B93E4DC009E6657 /* HeroTableViewCell.xib in Resources */,
 				52F42B7F2B88B9D9009E6657 /* Assets.xcassets in Resources */,
+				52F42C532B948F86009E6657 /* DetailCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +522,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F42BE12B925C4A009E6657 /* HeroCaseUse.swift in Sources */,
 				52F42C162B93B6CD009E6657 /* UIImageView.swift in Sources */,
 				52F42BCE2B8FA4A0009E6657 /* HTTPResponseCodes.swift in Sources */,
 				52F42C422B945D5B009E6657 /* DetailUseCase.swift in Sources */,
@@ -539,12 +545,14 @@
 				52F42BCC2B8FA452009E6657 /* HTTPMethods.swift in Sources */,
 				52F42B782B88B9D6009E6657 /* SceneDelegate.swift in Sources */,
 				52F42BCA2B8FA3CF009E6657 /* NetworkError.swift in Sources */,
+				52F42C522B948F86009E6657 /* DetailCollectionViewCell.swift in Sources */,
 				52F42C0C2B939F4F009E6657 /* NSMHero.swift in Sources */,
 				52F42BC72B8F6523009E6657 /* LoginUseCase.swift in Sources */,
 				52F42C032B93456F009E6657 /* ApiProvider.swift in Sources */,
 				52F42C4E2B946AB7009E6657 /* DetailViewController.swift in Sources */,
 				52F42BFA2B927127009E6657 /* StoreDataProvider.swift in Sources */,
 				52F42C0A2B939F4F009E6657 /* NSMTransformation.swift in Sources */,
+				52F42C552B94978C009E6657 /* UIcollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

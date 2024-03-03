@@ -8,22 +8,14 @@
 import Foundation
 import CoreData
 
-protocol DetailViewModelProtocol {
 
-    func loadData()
-}
-
-
-final class DetailViewModel: DetailViewModelProtocol {
-    private var heroess: [NSMHero] = []
-    private var secureData: SecureDataProtocol
+final class DetailViewModel {
+    private var transformaciones: [NSMTransformation] = []
     private var apiProvider: ApiProvider
     private var storeDataProvider: StoreDataProviderProtocol
 
-    init(secureData: SecureDataProtocol = SecureData(),
-         apiProvider: ApiProvider = ApiProvider(),
+    init(apiProvider: ApiProvider = ApiProvider(),
          storeDataProvider: StoreDataProviderProtocol = StoreDataProvider()) {
-        self.secureData = secureData
         self.apiProvider = apiProvider
         self.storeDataProvider = storeDataProvider
     }
@@ -36,14 +28,14 @@ final class DetailViewModel: DetailViewModelProtocol {
 
 extension DetailViewModel {
 
-    func loadData() {
-        heroess = storeDataProvider.fetchHeroes(filter: nil, sorting: self.sortDescriptor(ascending: false))
-        if storeDataProvider.countHeroes() == 0 {
-            apiProvider.getHero{ [weak self] result in
+    func loadData(id: String) {
+        transformaciones = storeDataProvider.fetchTransformations()
+        if transformaciones.isEmpty{
+            apiProvider.getTransformation(id: id){ [weak self] result in
                 switch result {
-                case .success(let heroes):
+                case .success(let transformation):
                     DispatchQueue.main.async {
-                        self?.storeDataProvider.insert(heroes: heroes)
+                        self?.storeDataProvider.insert(transformations: transformation)
                         self?.mapDataToHeroCellModel()
                     }
                 case .failure(let error):
@@ -68,20 +60,22 @@ extension DetailViewModel {
         }
     }
     
-    func numOfHero() -> Int {
-        return heroess.count
+    func numTransform() -> Int {
+        return transformaciones.count
+    }
+    
+    func transformAt(indexPath: IndexPath) -> NSMTransformation? {
+        guard indexPath.row < transformaciones.count else { return nil }
+        return transformaciones[indexPath.row]
     }
     
     
     func nameForHero(indexPath: IndexPath) -> String? {
-        return HeroAt(indexPath: indexPath)?.name
+        return transformAt(indexPath: indexPath)?.name
     }
     
     
-    func HeroAt(indexPath: IndexPath) -> NSMHero? {
-        guard indexPath.row < heroess.count else {return nil }
-        return heroess[indexPath.row]
-    }
+
     
 
     
@@ -93,7 +87,7 @@ extension DetailViewModel {
     
     private func addObservers() {
         NotificationCenter.default.addObserver(forName: NSManagedObjectContext.didSaveObjectsNotification, object: nil, queue: .main) { notification in
-            self.heroess = self.storeDataProvider.fetchHeroes(filter: nil, sorting: self.sortDescriptor(ascending: false))
+            self.transformaciones = self.storeDataProvider.fetchTransformations()
         }
     }
     

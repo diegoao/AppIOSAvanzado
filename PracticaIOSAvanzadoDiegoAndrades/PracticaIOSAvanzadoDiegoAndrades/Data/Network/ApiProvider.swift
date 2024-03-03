@@ -24,6 +24,7 @@ enum GokuEndpoints {
     }
 }
 
+
 enum GokuApiError: Error, CustomStringConvertible {
     
     case server(error: Error)
@@ -52,8 +53,10 @@ struct RequestProvider {
     }
     let host: URL = URL(string: "https://dragonball.keepcoding.education/api")!
   
-    func requestFor(endpoint: GokuEndpoints, token: String) -> URLRequest {
+    func requestFor(endpoint: GokuEndpoints, token: String, idtransformation: String? = nil) -> URLRequest {
         let token = token
+        let idtransformation = idtransformation
+
         switch endpoint {
         case .listHeroes, .listTransformaciones, .listLocations:
             var request = URLRequest.init(url: endpoint.urlFor(host: host))
@@ -61,12 +64,24 @@ struct RequestProvider {
             request.httpMethod = HTTPMethods.post
             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
             struct HeroRequest: Encodable {
                 let name: String
             }
+            struct TransformationRequest: Encodable {
+                let id: String
+            }
             
-            let heroRequest = HeroRequest(name: "")
-            request.httpBody = try? JSONEncoder().encode(heroRequest)
+            if case.listHeroes = endpoint {
+                let heroRequest = HeroRequest(name: "")
+                request.httpBody = try? JSONEncoder().encode(heroRequest)
+            }
+            if case.listTransformaciones = endpoint {
+                let heroRequest = TransformationRequest(id: idtransformation ?? "")
+                request.httpBody = try? JSONEncoder().encode(heroRequest)
+            }
+            
+         
             return request
         }
     }
@@ -91,8 +106,8 @@ class ApiProvider {
         
     }
     
-    func getTransformation(completion: @escaping ((Result<[Transformation], GokuApiError>) -> Void)) {
-        let request = requestProvider.requestFor(endpoint: .listTransformaciones, token:secureData.getToken() ?? "")
+    func getTransformation(id: String, completion: @escaping ((Result<[Transformation], GokuApiError>) -> Void)) {
+        let request = requestProvider.requestFor(endpoint: .listTransformaciones, token:secureData.getToken() ?? "", idtransformation: id)
         self.makeRequest(request: request, completion: completion)
     }
     

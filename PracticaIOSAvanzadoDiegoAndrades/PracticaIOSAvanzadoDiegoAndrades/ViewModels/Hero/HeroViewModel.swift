@@ -65,7 +65,6 @@ extension HeroViewModel {
     
     private func mapDataToHeroCellModel(filter: NSPredicate? = nil, sorting: [NSSortDescriptor]? = nil){
      let heroes = self.storeDataProvider.fetchHeroes(filter: filter, sorting: sorting)
-        print(heroes)
     }
     
 
@@ -82,6 +81,10 @@ extension HeroViewModel {
     
     func nameForHero(indexPath: IndexPath) -> String? {
         return HeroAt(indexPath: indexPath)?.name
+    }
+    
+    func idForHero(indexPath: IndexPath) -> String? {
+        return HeroAt(indexPath: indexPath)?.id
     }
     
     

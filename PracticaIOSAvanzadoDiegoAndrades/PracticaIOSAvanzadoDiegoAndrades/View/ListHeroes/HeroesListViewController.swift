@@ -70,8 +70,8 @@ class HeroesListViewController: UIViewController {
 //MARK: - Extension Delegate para temas de navegación
 extension HeroesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let name = viewModel.nameForHero(indexPath: indexPath)
-        let detailViewController = DetailViewController()
+        let id = viewModel.idForHero(indexPath: indexPath)
+        let detailViewController = DetailViewController(id: id ?? "")
         navigationController?.pushViewController(detailViewController, animated: true)
         
     }
